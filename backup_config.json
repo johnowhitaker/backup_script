@@ -1,0 +1,5 @@
+{
+    "source_directory": "/path/to/source",
+    "destination_directory": "/path/to/backups",
+    "max_ages": [2, 14, 60]
+}

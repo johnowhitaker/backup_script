@@ -31,10 +31,13 @@ WantedBy=multi-user.target
 
 ```
 [Unit]
-Description=Run backup every hour
+Description=Run Backup Service Hourly
 
 [Timer]
 OnCalendar=hourly
+
+[Install]
+WantedBy=timers.target
 ```
 
 4. Enable and start the timer:
@@ -42,6 +45,12 @@ OnCalendar=hourly
 ```
 sudo systemctl enable backup.timer
 sudo systemctl start backup.timer
+```
+
+Make sure you have execute permissions for the script:
+
+```
+chmod +x backup_script.py
 ```
 
 ## Testing

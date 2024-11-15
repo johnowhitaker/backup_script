@@ -1,3 +1,5 @@
+NB, this is superseded by https://johnowhitaker.github.io/autobackup/ (https://github.com/johnowhitaker/autobackup) - ignore other than for reference
+
 # backup_script
 
 Building a quick script for periodic backups of a folder

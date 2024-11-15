@@ -39,9 +39,8 @@ def clean_dates(dates, now=None, max_ages=MAX_AGES):
     dates.sort()
 
     for max_age in max_ages:
-        older_than_max = [d for d in dates if (now - datetime.strptime(d, '%Y%m%d_%H%M%S')).days < max_age]
-        if older_than_max:
-            clean.append(older_than_max[0])
+        lt_max = [d for d in dates if (now - datetime.strptime(d, '%Y%m%d_%H%M%S')).days < max_age]
+        if lt_max: clean.append(lt_max[0])
 
     clean.extend(dates[-5:])  # Keep the newest 5
     return sorted(set(clean))  # Remove duplicates and sort
